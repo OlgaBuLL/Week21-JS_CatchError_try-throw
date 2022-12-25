@@ -1,0 +1,184 @@
+/* #FFC973; */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: #1b212d;
+  color: #03e9f4;
+  font-family: "Unbounded";
+  text-align: center;
+}
+h1 {
+  color: #03e9f4;
+  /* text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
+    #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px;
+  -webkit-font-smoothing: antialiased; */
+  /* -webkit-text-stroke: 1px #fff; */
+  filter: drop-shadow(1px 0px 0px #000) drop-shadow(-1px 0px 0px #000)
+    drop-shadow(0px 1px 0px #000) drop-shadow(0px -1px 0px #000);
+}
+.search {
+  width: 60%;
+  margin: 3rem auto 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 3rem;
+}
+.number {
+  font-size: smaller;
+  color: darkgray;
+}
+#number,
+#userSearch {
+  color: #1b212d;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 2px #38f5ff;
+  font-family: "Unbounded";
+  font-size: larger;
+  padding-left: 1rem;
+}
+#number:focus,
+#userSearch:focus {
+  border: 1px solid #c0e7fc;
+  outline: none;
+}
+#number:hover,
+#userSearch:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+#number::placeholder,
+#userSearch::placeholder {
+  font-size: smaller;
+  color: darkgray;
+}
+
+button {
+  background: #1d2330;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  width: 180px;
+  height: 60px;
+  color: #03e9f4;
+  font-family: "Unbounded";
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+  -webkit-box-reflect: below 1px -webkit-linear-gradient(transparent, #0005);
+}
+span {
+  position: absolute;
+}
+span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 4s linear infinite;
+}
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, #03e9f4);
+  animation: btn-anim2 4s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 4s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 4s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.gif-container {
+  max-width: 70%;
+  margin: 0 auto;
+  column-count: 4;
+}
+img {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0 1rem;
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .gif-container {
+    column-count: 3;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .gif-container {
+    column-count: 2;
+  }
+}
