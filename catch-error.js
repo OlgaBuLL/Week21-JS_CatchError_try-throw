@@ -12,7 +12,7 @@ gifButton.addEventListener("click", function () {
   console.log(search.value);
   fetch(
     // некорректный fetch запрос, чтобы проверить вывод ошибки в alert:
-    `/v1/gifs/search?api_key=AUR1oawy4r9z1QfA3jhCx7utLuYnNup9&q=${search.value}&limit=${number.value}&offset=0&rating=g&lang=en`
+    `https://api.giphy.com/v1/gifs/search?api_key=AUR1oawy4r9z1QfA3jhCx7utLuYnNup9&q=${search.value}&limit=${number.value}&offset=0&rating=g&lang=en`
   )
     .then((res) => {
       try {
